@@ -5,16 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProAgil.WebAPI.Data;
-using ProAgil.WebAPI.Model;
+using ProAgil.Repository;
 namespace ProAgil.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        public readonly DataContext _Context;
-        public ValuesController(DataContext context)
+        public readonly ProAgilContext _Context;
+        public ValuesController(ProAgilContext context)
         {
             this._Context = context;
         }
